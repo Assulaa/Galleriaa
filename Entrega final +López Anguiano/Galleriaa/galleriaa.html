@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galleriaa</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #000;
+        }
+        nav {
+            background-color: #6a0dad;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .active {
+            display: block;
+        }
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            height: auto; 
+            weight: auto;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .carousel img {
+            width: auto;
+            height: 500px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+        }
+        .carousel-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 15px;
+        }}
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%; 
+            overflow: hidden; 
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #6a0dad;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+
+        }
+        .gallery-item {
+            width: 300px;
+            border-radius: 8px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 600px) {
+            .gallery-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('sobre-nosotros')">Sobre nosotros</a>
+        <a onclick="showSection('street-art')">Street Art</a>
+        <a onclick="showSection('alrededor-del-mundo')">Alrededor del mundo</a>
+    </nav>
+
+    <!-- Sección Home -->
+    <section id="home" class="section active">
+        <h2>Obras del Mes</h2>
+        <h3>Mostramos un conjunto de obras creadas por nuestros artistas durante el mes de Mayo</h3>
+        <div class="carousel">
+            <button class="arrow left" onclick="changeSlide(-1)">&larr;</button>
+            <div class="carousel-content" id="carousel-content">
+                <img src="./Multimedia/Home/ObeyGiant.jpg"alt="Obra 1">
+                <img src="./Multimedia/Home/Artista secreto1.jpg" alt="Obra 2">
+                <img src="./Multimedia/Home/Artista secreto2.jpg" alt="Obra 2">
+                <img src="./Multimedia/Home/Artista secreto3.jpg" alt="Obra 2">
+                <img src="./Multimedia/Home/Artista secreto4.jpg" alt="Obra 3">
+                <img src="./Multimedia/Home/Artista secreto5.jpg"alt="Obra 3">
+                <img src="./Multimedia/Home/Artista secreto6.jpg" alt="Obra 4">
+                <img src="./Multimedia/Home/Artista secreto7.jpg" alt="Obra 4">
+                <img src="./Multimedia/Home/Artista secreto8.jpg" alt="Obra 4">
+                <img src="./Multimedia/Home/Artista secreto9.jpg" alt="Obra 4">
+                <img src="./Multimedia/Home/kobra.jpeg" alt="Obra 4">
+                <img src="./Multimedia/Home/Mazoan.webp" alt="Obra 4">
+            </div>
+
+            <button class="arrow right" onclick="changeSlide(1)">&rarr;</button>
+        </div>
+
+    </section>
+
+    <!-- Sección Sobre nosotros -->
+     <section id="sobre-nosotros" class="section active">
+        <h2>Sobre Nosotros</h2>
+        <div class="columns">
+            <div class="column">
+                <img class="vertical-image" src="./Multimedia/Sobre nosotros/Estudio.jpg" alt="Artista trabajando en un mural">
+            </div>
+            <div class="column">
+                Nuestra pasión por el arte se refleja en nuestra misión de impulsar y apoyar a los artistas locales. Creemos firmemente que el arte callejero y urbano es una forma de expresión cultural que merece ser valorada y celebrada en todo el mundo. Por eso, nos hemos comprometido a ofrecer una plataforma que visibilice el talento y la creatividad de quienes trabajan en las calles, con la esperanza de que sus mensajes y estilos únicos lleguen a públicos más amplios.</p>
+                
+                <p>En nuestra galería virtual, damos prioridad a la autenticidad y diversidad, seleccionando cuidadosamente una variedad de obras que representan las voces únicas de la escena artística urbana. Entendemos la importancia de la libertad creativa y brindamos a los artistas un espacio para mostrar su trabajo sin limitaciones. Nuestro objetivo es ofrecer un espacio inclusivo donde los artistas puedan presentarse, contar sus historias y conectarse con un público que valore su visión.</p>
+                
+                <p>Reconocemos la riqueza cultural que el arte callejero trae a nuestras ciudades. Cada mural o instalación es una ventana al alma del artista y refleja la realidad social que lo rodea. Impulsamos activamente la colaboración entre artistas y organizaciones locales para que juntos podamos crear un impacto positivo en la sociedad, inspirando a las personas a mirar más allá de los muros y ver el valor que el arte aporta a nuestras vidas cotidianas.</p>
+            </div>
+        </div>
+
+
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #000;
+            margin: 0;
+            padding: 20px;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #000;
+        }
+        .columns {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+        }
+        img.vertical-image {
+            width: auto;
+            max-width: 500px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .columns {
+                flex-direction: column;
+            }
+            img.vertical-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+
+    </section>
+    
+        <!-- Sección Street Art -->
+        <section id="street-art" class="section">
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img class="vertical-image" src="./Multimedia/Street art/LeeLee.jpg" alt="Lee Lee La Cubana" style="width: 100%; max-width: 400px; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <h2>Lee Lee La Cubana</h2>
+    
+                    <p>Ashley Miah, conocida como Lee Lee La Cubana, es una artista pop radicada en Nueva York que crea obras nostálgicas que reflejan su cultura, comunidad y crecimiento en el entorno urbano de Nueva York. Como un recordatorio de las riquezas internas, el sello distintivo del arte de Ashley es el diamante y, con su colección actual, busca difundir mensajes sobre la riqueza interior.</p>
+                </div>
+    
+                <div class="gallery-item">
+                     <img class="vertical-image" src="./Multimedia/Street art/Deco Popz.jpeg" alt="Deco Popz" style="width: 100%; max-width: 400px; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    
+                    <h2>Deco Popz</h2>
+                    
+                    <p>El trabajo de Zee Cordero, también conocido como Deco PopZ, es una vibrante fusión de influencias extraídas de los icónicos artistas pop de las décadas de los 70, 80 y 90. Inspirado por las contribuciones revolucionarias de figuras como Picasso, Warhol, Haring y Lichtenstein, busca capturar la esencia de sus estilos audaces y expresivos en su obra. Adoptando los colores vivos, las composiciones dinámicas y el comentario social prevalente en sus trabajos, Zee se esfuerza por reinterpretar y modernizar estas influencias a través de su propio lente artístico.</p>
+    
+                </div>
+    
+    
+                <div class="gallery-item">
+                    <img class="vertical-image" src="./Multimedia/Street art/Amethyst Mone.webp" alt="Amethyst Mone" style="width: 100%; max-width: 400px; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <h2>Amethyst Monet</h2>
+    
+                    <p>Amethyst Monet es una artista autodidacta nacida en las Montañas de Sierra Nevada, California, y actualmente radica en la ciudad de Nueva York. Amethyst ha participado en múltiples proyectos de murales públicos, incluyendo uno en el Jardín Botánico de Queens y una colaboración en Paseo Park, Jackson Heights. Ha exhibido sus pinturas en varias exposiciones colectivas y recientemente apareció en Epicenter NYC y The Culture Candy.</p>
+                </div>
+    
+            </div>
+        </section>
+    
+        
+
+
+
+    <!-- Sección Alrededor del mundo -->
+    <section id="alrededor-del-mundo" class="section">
+        <h2>Alrededor del mundo</h2>
+        <h3>Esta sección desde un mapa muestra a los artistas que han colaborado con nosotoros y el lugar en dónde se encuentran sus obras </h3>
+        <iframe src="https://www.google.com/maps/embed"></iframe>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(direction) {
+            const carousel = document.getElementById("carousel-content");
+            const slides = carousel.children;
+            slideIndex = (slideIndex + direction + slides.length) % slides.length;
+            const offset = -slideIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
